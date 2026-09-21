@@ -1,0 +1,4 @@
+import fs from 'node:fs';import path from 'node:path';
+const allowed=new Set(['analysis-web','fixtures','tests','scripts','deploy','docs','migrations','.github']);
+const bad=[];function scan(dir){for(const e of fs.readdirSync(dir,{withFileTypes:true})){const f=path.join(dir,e.name);if(e.isDirectory())scan(f);else{if(/\.(xlsx?|dump|db|tar|zip|log)$/i.test(f)||/credentials/i.test(f))bad.push(f);if(/\.(js|mjs|json|md|ya?ml|ps1|cmd|example)$/.test(f)){const s=fs.readFileSync(f,'utf8');if(/(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{40,}|-----BEGIN (?:RSA |OPENSSH )?PRIVATE KEY-----)/.test(s))bad.push(f);if(/(?:bseWd6C2tDGW0FnQsj1|tbl9bnh3ThD4dNB27VD|viwJxsXMb0hbwM61HQx|192\.168\.49\.113)/.test(s)&&!f.endsWith('audit.mjs'))bad.push(f);}}}}
+for(const d of allowed)scan(d);if(bad.length)throw Error('Sensitive/local files found: '+bad.join(', '));console.log('Repository file audit passed (manual review still required).');

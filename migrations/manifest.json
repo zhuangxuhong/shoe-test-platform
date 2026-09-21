@@ -1,0 +1,5 @@
+{
+  "schemaVersion": 1,
+  "automaticMigrations": [],
+  "policy": "Existing production schema is audited, never reinitialized by application deployment."
+}

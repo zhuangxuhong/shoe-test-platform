@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>鞋类测试 · 分析工作台 V2</title><link rel="stylesheet" href="/styles.css"></head>
+<body>
+<main class="workspace">
+  <section class="filter-panel" aria-label="筛选测试记录">
+    <div class="filter-row"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索鞋款、编号或测试人" aria-label="搜索鞋款、编号或测试人"><kbd>/</kbd></label><label class="compact-select"><span>品类</span><select id="category" aria-label="品类"><option value="">全部品类</option></select></label><button id="secondaryFilter" class="button filter-button" aria-haspopup="dialog">二级品类 <span id="secondaryCount">全部</span>⌄</button><button id="moreFilters" class="button filter-button">☷ 更多筛选 <span id="extraCount" class="counter hidden">0</span></button><span class="filter-divider"></span><select id="preset" aria-label="常用筛选" class="preset-select"><option value="">常用筛选</option><option value="carbon">碳板跑鞋</option><option value="light">轻量跑鞋 ≤ 250g</option><option value="basketball">篮球鞋</option></select><button id="savePreset" class="button quiet" title="保存当前筛选">保存筛选</button></div>
+    <div class="filter-bottom"><div id="activeFilters" class="active-filters"></div><a id="teableEntry" class="button teable-entry" href="#" target="_blank" rel="noopener noreferrer">数据录入 · Teable ↗</a></div>
+  </section>
+  <div id="errorBanner" class="error-banner hidden" role="alert"></div>
+  <div class="work-grid" id="workGrid">
+    <section class="catalog card" id="catalog" aria-label="鞋款选择区">
+      <div class="catalog-tools"><label class="checkbox-label"><input id="onlySelected" type="checkbox">仅看已选 <span id="catalogSelected">0</span></label><button id="addVisible" class="button quiet">选入当前结果</button><button id="toggleCatalog" class="catalog-toggle" aria-label="收起选鞋区" aria-controls="catalog" aria-expanded="true" title="收起选鞋区">◀</button></div>
+      <div class="catalog-collapsed-title">鞋款选择区</div><div class="catalog-subhead"><span>鞋款 / 测试记录</span><select id="listSort" aria-label="鞋款排序"><option value="complete">数据完整度优先</option><option value="date">测试日期由新到旧</option><option value="name">鞋款名称</option><option value="weight">重量由轻到重</option></select></div>
+      <div id="recordList" class="record-list"><div class="loading-state"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div><p>正在读取真实测试数据…</p></div></div>
+      <div class="catalog-footer"><span id="pageInfo"></span><div><button id="prevPage" class="page-btn" aria-label="上一页">←</button><button id="nextPage" class="page-btn" aria-label="下一页">→</button></div></div>
+    </section>
+    <section class="analysis card" id="analysis" aria-label="分析对比区">
+      <div class="analysis-head"><div><h2>分析工作台 <span id="selectionCount">0 条记录</span></h2></div><button id="export" class="button quiet">↓ 导出对比 CSV</button></div>
+      <nav class="tabs" aria-label="分析视图"><button data-view="metric" class="active" aria-selected="true">指标对比</button><button data-view="radar" aria-selected="false">综合表现</button><button data-view="table" aria-selected="false">详细数据</button></nav>
+      <div class="analysis-scroll">
+        <div class="analysis-controls"><label><span>指标分组</span><select id="metricGroup" aria-label="指标分组"></select></label><label class="metric-select"><span>当前指标</span><select id="metric" aria-label="当前指标"></select></label><label><span>基准记录</span><select id="baseline" aria-label="基准记录"></select></label><label><span>参考范围</span><select id="scope" aria-label="参考范围"><option value="filtered">当前筛选结果</option><option value="category">基准记录同品类</option></select></label></div>
+        <div id="emptyState" class="empty-state hidden"><div class="empty-icon">＋</div><h3>把想比较的鞋放在一起</h3><p>从左侧选择测试记录，最多可以同时比较 12 条。</p><button id="demo" class="button primary">选入 3 条示例记录</button></div>
+        <div id="analysisContent">
+          <div id="summaryCards" class="summary-cards"></div>
+          <div id="metricView" class="view"><div class="metric-chart-panel"><div class="chart-heading"><div><h3 id="chartTitle">整鞋重量</h3><p id="chartSubtitle"></p></div><select id="chartSort" aria-label="图表排序"><option value="asc">数值从低到高</option><option value="desc">数值从高到低</option><option value="selected">按选入顺序</option></select></div><div id="barChart" class="bar-chart"></div></div><div class="metric-table-panel"><div class="section-label">相对基准的差异 <span>数值差 / 百分比</span></div><div id="differenceTable" class="table-scroll"></div></div></div>
+          <div id="radarView" class="view hidden"><div class="chart-heading"><div><h3>综合指标轮廓</h3><p>最多选择 6 条记录 · 点击左侧记录切换</p></div><select id="radarPreset" aria-label="雷达指标组合"><option value="core">核心指标</option><option value="cushion">缓震与回弹</option><option value="structure">重量与结构</option></select></div><div class="radar-body"><div id="radarPicker" class="radar-picker" aria-label="雷达图记录图例"></div><div id="radarChart" class="radar-chart"></div></div><button id="openRadarGuide" class="radar-help" aria-haspopup="dialog">ⓘ 指标与计算说明</button></div>
+          <div id="tableView" class="view hidden"><div id="detailTable" class="table-scroll detail-table"></div></div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="compare-dock" id="compareDock"><button id="toggleDock" class="dock-toggle" aria-expanded="true" aria-controls="dockChips">收起对比栏 ↓</button><div class="dock-label"><span id="dockCount">0<span>/ 12</span></span><small>已选记录</small></div><div id="dockChips" class="dock-chips"><span class="muted">点击鞋款卡片加入对比</span></div><div class="dock-actions"><button id="clearSelection" class="button primary">清空</button></div></footer>
+<dialog id="radarGuideDialog" class="radar-guide-dialog"><form method="dialog" class="guide-header"><h2>雷达图 · 指标与计算说明</h2><button class="icon-button" aria-label="关闭指标说明">×</button></form><div id="radarNote" class="radar-guide"></div></dialog>
+<dialog id="secondaryDialog" class="secondary-dialog"><form method="dialog" class="secondary-header"><div><h2>二级品类</h2><p id="secondaryDescription"></p></div><button class="icon-button" aria-label="关闭二级品类">×</button></form><div id="secondaryTags"></div><div class="dialog-actions"><button id="clearSecondary" class="button quiet">清除二级品类</button><button id="applySecondary" class="button primary">完成筛选</button></div></dialog>
+<dialog id="filterDialog" class="drawer"><form method="dialog" class="drawer-header"><div><h2>精确筛选</h2></div><button class="icon-button" aria-label="关闭筛选">×</button></form><div class="drawer-body"><div class="drawer-intro">条件可自由组合，结果实时预览；已选记录会保留。</div><section><h3>品牌 <small>同组内满足任意一个</small></h3><input id="brandSearch" class="text-input" type="search" placeholder="输入中英文品牌名" aria-label="搜索品牌"><div id="brandOptions" class="brand-options"></div></section><section><h3>品类标签 <small>组间条件同时满足</small></h3><div id="tagOptions"></div></section><section><h3>数值范围</h3><div id="rangeRows"></div><button id="addRange" class="button outline" type="button">＋ 添加数值条件</button></section><section id="savedPresetsSection"><h3>我的常用筛选</h3><div id="savedPresets"></div></section></div><div class="drawer-footer"><button id="resetFilters" class="button quiet">清除全部条件</button><button id="applyFilters" class="button primary">查看结果</button></div></dialog>
+<dialog id="saveDialog" class="small-dialog"><form id="saveForm"><h2>保存常用筛选</h2><p>保存在当前浏览器，下次打开可直接使用。</p><input id="presetName" class="text-input" maxlength="30" required placeholder="例如：日常训练跑鞋" aria-label="筛选名称"><div class="dialog-actions"><button id="cancelSave" class="button" type="button">取消</button><button class="button primary" type="submit">保存</button></div></form></dialog>
+<div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+<script src="/vendor/echarts.min.js"></script><script src="/core.js"></script><script src="/app.js"></script>
+</body></html>

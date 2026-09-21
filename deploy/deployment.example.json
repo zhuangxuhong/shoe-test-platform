@@ -1,0 +1,14 @@
+{
+  "environment": "production",
+  "composeFile": "C:/server/teable-deploy/docker-compose.yaml",
+  "envFile": "C:/server/teable-deploy/.env",
+  "project": "teable",
+  "service": "analysis-web",
+  "container": "teable-analysis-web-1",
+  "network": "teable-network",
+  "healthUrl": "http://127.0.0.1:8088/api/health",
+  "dataUrl": "http://127.0.0.1:8088/api/records",
+  "stateDir": "C:/server/private-release-backups",
+  "entryUrl": "http://YOUR-SERVER:13000/base/YOUR-BASE/YOUR-TABLE/YOUR-VIEW",
+  "minRecords": 1
+}

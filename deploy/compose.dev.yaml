@@ -1,0 +1,31 @@
+name: shoe-team-dev
+services:
+  teable:
+    image: registry.cn-shenzhen.aliyuncs.com/teable/teable@sha256:6199e9f1015174998f227219b81bf8f68b8669d690f9081cd1811841c987fc2d
+    restart: unless-stopped
+    ports: ['127.0.0.1:13001:3000']
+    env_file: ../.env.teable-dev
+    volumes: ['assets:/app/.assets']
+    depends_on:
+      db: {condition: service_healthy}
+      cache: {condition: service_started}
+  db:
+    image: registry.cn-shenzhen.aliyuncs.com/teable/postgres@sha256:d63b2285d3e71c42fe22a79f60ddefac9178d3887d91841e904bd435862ba358
+    environment:
+      POSTGRES_USER: teable
+      POSTGRES_DB: teable
+      POSTGRES_PASSWORD: ${DEV_DB_PASSWORD:?Run start-full-dev first}
+    volumes: ['database:/var/lib/postgresql/data']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U teable -d teable']
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  cache:
+    image: registry.cn-shenzhen.aliyuncs.com/teable/redis@sha256:703da9dda113aadbd133f8e567e1344f1c7ec6e930e18c2a62a3e7d17aca1d40
+    command: redis-server --requirepass ${DEV_REDIS_PASSWORD:?Run start-full-dev first}
+    volumes: ['cache:/data']
+volumes:
+  assets: {}
+  database: {}
+  cache: {}

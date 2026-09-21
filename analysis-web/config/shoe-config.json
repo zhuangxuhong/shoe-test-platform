@@ -1,0 +1,764 @@
+{
+  "fieldNames": {
+    "id": "唯一ID号",
+    "name": "名称",
+    "date": "测试日期",
+    "legacyType": "类型",
+    "brand": "品牌",
+    "primaryCategory": "一级品类",
+    "structureTags": "结构标签",
+    "functionTags": "功能标签",
+    "sceneTags": "场景标签",
+    "systemNumber": "系统序号",
+    "tester": "测试人",
+    "buyer": "购买人",
+    "hasInsole": "有无鞋垫",
+    "image": "插入图片",
+    "remark": "备注"
+  },
+  "idPrefix": "T",
+  "idWidth": 4,
+  "brands": [
+    {
+      "name": "Qiaodan",
+      "displayName": "Qiaodan",
+      "logo": "/static/brand-logos/qiaodan.png",
+      "color": "#b7192b",
+      "aliases": [
+        "乔丹",
+        "qiaodan",
+        "本品",
+        "飞影",
+        "轻锋",
+        "狂鲨",
+        "锋刺",
+        "追风",
+        "轻鸿",
+        "破浪",
+        "啡鹏",
+        "零感",
+        "FE",
+        "魅影",
+        "幻影",
+        "领航",
+        "幸运星"
+      ]
+    },
+    {
+      "name": "Nike",
+      "displayName": "Nike",
+      "logo": "/static/brand-logos/nike.svg",
+      "color": "#111111",
+      "aliases": [
+        "nike",
+        "耐克",
+        "vaporfly",
+        "alphafly",
+        "pegasus",
+        "vomero",
+        "structure",
+        "free rn",
+        "free run",
+        "zoom fly"
+      ]
+    },
+    {
+      "name": "adidas",
+      "displayName": "adidas",
+      "logo": "/static/brand-logos/adidas.svg",
+      "color": "#111111",
+      "aliases": [
+        "adidas",
+        "adizero",
+        "阿迪",
+        "阿迪达斯",
+        "adios",
+        "boston",
+        "ultraboost",
+        "supernova",
+        "terrex",
+        "猎鹰"
+      ]
+    },
+    {
+      "name": "ASICS",
+      "displayName": "ASICS",
+      "logo": "/static/brand-logos/asics.png",
+      "color": "#001e62",
+      "aliases": [
+        "asics",
+        "亚瑟士",
+        "gel nimbus",
+        "gel kayano",
+        "metaspeed",
+        "superblast",
+        "superblsat"
+      ]
+    },
+    {
+      "name": "Li-Ning",
+      "displayName": "Li-Ning",
+      "logo": "/static/brand-logos/lining.svg",
+      "color": "#c40016",
+      "aliases": [
+        "李宁",
+        "lining",
+        "li ning",
+        "飞电",
+        "赤兔",
+        "越影",
+        "绝影",
+        "超轻",
+        "䨻",
+        "利刃",
+        "闪击"
+      ]
+    },
+    {
+      "name": "ANTA",
+      "displayName": "ANTA",
+      "logo": "/static/brand-logos/anta.svg",
+      "color": "#d71920",
+      "aliases": [
+        "安踏",
+        "anta",
+        "c202",
+        "氮科技"
+      ]
+    },
+    {
+      "name": "Xtep",
+      "displayName": "Xtep",
+      "logo": "/static/brand-logos/xtep.svg",
+      "color": "#e60012",
+      "aliases": [
+        "特步",
+        "xtep",
+        "160x",
+        "260x",
+        "香菜"
+      ]
+    },
+    {
+      "name": "361°",
+      "displayName": "361°",
+      "logo": "/static/brand-logos/361.png",
+      "color": "#ee1c25",
+      "aliases": [
+        "361",
+        "361°",
+        "飞燃",
+        "赤焰"
+      ]
+    },
+    {
+      "name": "PUMA",
+      "displayName": "PUMA",
+      "logo": "/static/brand-logos/puma.svg",
+      "color": "#111111",
+      "aliases": [
+        "puma",
+        "彪马",
+        "nitro",
+        "deviate",
+        "velocity"
+      ]
+    },
+    {
+      "name": "Brooks",
+      "displayName": "Brooks",
+      "logo": "/static/brand-logos/brooks.png",
+      "color": "#0055a4",
+      "aliases": [
+        "brooks",
+        "布鲁克斯",
+        "glycerin",
+        "ghost",
+        "adrenaline",
+        "launch"
+      ]
+    },
+    {
+      "name": "New Balance",
+      "displayName": "New Balance",
+      "logo": "/static/brand-logos/newbalance.svg",
+      "color": "#cf0a2c",
+      "aliases": [
+        "new balance",
+        "nb ",
+        "fresh foam",
+        "fuelcell",
+        "sc elite",
+        "newbalance",
+        "nb",
+        "sc trainer"
+      ]
+    },
+    {
+      "name": "HOKA",
+      "displayName": "HOKA",
+      "logo": "/static/brand-logos/hoka.png",
+      "color": "#005cab",
+      "aliases": [
+        "hoka",
+        "one one",
+        "clifton",
+        "bondi",
+        "mach",
+        "cielo"
+      ]
+    },
+    {
+      "name": "Saucony",
+      "displayName": "Saucony",
+      "logo": "/static/brand-logos/saucony.png",
+      "color": "#005baa",
+      "aliases": [
+        "saucony",
+        "索康尼",
+        "圣康尼",
+        "endorphin",
+        "triumph",
+        "kinvara",
+        "sacuony"
+      ]
+    },
+    {
+      "name": "Mizuno",
+      "displayName": "Mizuno",
+      "logo": "/static/brand-logos/mizuno.png",
+      "color": "#003f87",
+      "aliases": [
+        "mizuno",
+        "美津浓",
+        "wave rider",
+        "wave rebellion"
+      ]
+    },
+    {
+      "name": "On",
+      "displayName": "On",
+      "logo": "/static/brand-logos/on.png",
+      "color": "#111111",
+      "aliases": [
+        "on running",
+        "on昂跑",
+        "昂跑",
+        "cloudmonster",
+        "cloudsurfer",
+        "cloudboom"
+      ]
+    },
+    {
+      "name": "Altra",
+      "displayName": "Altra",
+      "logo": "/static/brand-logos/altra.svg",
+      "color": "#d71920",
+      "aliases": [
+        "altra",
+        "torin",
+        "escalante",
+        "mont blanc"
+      ]
+    },
+    {
+      "name": "Vibram",
+      "displayName": "Vibram",
+      "logo": "/static/brand-logos/vibram.png",
+      "color": "#f4c400",
+      "aliases": [
+        "vibram",
+        "五指鞋",
+        "fivefingers"
+      ]
+    },
+    {
+      "name": "VIVOBAREFOOT",
+      "displayName": "VIVOBAREFOOT",
+      "logo": "/static/brand-logos/vivobarefoot.png",
+      "color": "#111111",
+      "aliases": [
+        "vivobarefoot",
+        "vivo primus",
+        "vivo "
+      ]
+    },
+    {
+      "name": "Umbro",
+      "displayName": "Umbro",
+      "logo": "/static/brand-logos/umbro.png",
+      "color": "#003087",
+      "aliases": [
+        "umbro",
+        "茵宝"
+      ]
+    },
+    {
+      "name": "Salomon",
+      "displayName": "Salomon",
+      "logo": "/static/brand-logos/salomon.png",
+      "color": "#111111",
+      "aliases": [
+        "salomon",
+        "萨洛蒙"
+      ]
+    },
+    {
+      "name": "Skechers",
+      "displayName": "Skechers",
+      "logo": "/static/brand-logos/skechers.png",
+      "color": "#004b93",
+      "aliases": [
+        "skechers",
+        "斯凯奇",
+        "go run"
+      ]
+    },
+    {
+      "name": "Peak",
+      "displayName": "Peak",
+      "logo": "/static/brand-logos/peak.png",
+      "color": "#e50012",
+      "aliases": [
+        "匹克",
+        "peak",
+        "态极",
+        "无双"
+      ]
+    },
+    {
+      "name": "Do-Win",
+      "displayName": "Do-Win",
+      "logo": "/static/brand-logos/dowin.png",
+      "color": "#0b5cad",
+      "aliases": [
+        "多威",
+        "do-win",
+        "dowin"
+      ]
+    },
+    {
+      "name": "Mount to Coast",
+      "displayName": "Mount to Coast",
+      "logo": "/static/brand-logos/mount-to-coast.png",
+      "color": "#222222",
+      "aliases": [
+        "mount to coast"
+      ]
+    },
+    {
+      "name": "Speedland",
+      "displayName": "Speedland",
+      "logo": "/static/brand-logos/speedland.png",
+      "color": "#111111",
+      "aliases": [
+        "speedland"
+      ]
+    },
+    {
+      "name": "Bmai",
+      "displayName": "Bmai",
+      "logo": "/static/brand-logos/bmai.png",
+      "color": "#e60012",
+      "aliases": [
+        "必迈",
+        "bmai"
+      ]
+    },
+    {
+      "name": "Other",
+      "displayName": "Other",
+      "logo": "/static/brand-logos/other.svg",
+      "color": "#667386",
+      "aliases": [
+        "其他",
+        "未知"
+      ]
+    },
+    {
+      "name": "ATHLETA",
+      "displayName": "ATHLETA",
+      "color": "#111111",
+      "aliases": [
+        "athleta"
+      ],
+      "logo": "/static/brand-logos/athleta.svg"
+    },
+    {
+      "name": "Erke",
+      "displayName": "Erke",
+      "color": "#c7000b",
+      "aliases": [
+        "erke",
+        "鸿星尔克",
+        "尔克"
+      ],
+      "logo": "/static/brand-logos/erke.svg"
+    },
+    {
+      "name": "FILA",
+      "displayName": "FILA",
+      "color": "#002f6c",
+      "aliases": [
+        "fila",
+        "斐乐"
+      ],
+      "logo": "/static/brand-logos/fila.svg"
+    },
+    {
+      "name": "Joma",
+      "displayName": "Joma",
+      "color": "#003f8f",
+      "aliases": [
+        "joma"
+      ],
+      "logo": "/static/brand-logos/joma.svg"
+    },
+    {
+      "name": "Kailas",
+      "displayName": "Kailas",
+      "color": "#f05a28",
+      "aliases": [
+        "kailas",
+        "凯乐石",
+        "凯乐石kailas"
+      ],
+      "logo": "/static/brand-logos/kailas.svg"
+    },
+    {
+      "name": "YONEX",
+      "displayName": "YONEX",
+      "color": "#0b7f3a",
+      "aliases": [
+        "yonex",
+        "尤尼克斯",
+        "优尼克斯"
+      ],
+      "logo": "/static/brand-logos/yonex.svg"
+    },
+    {
+      "name": "开野",
+      "displayName": "开野",
+      "color": "#22543d",
+      "aliases": [
+        "开野",
+        "kaiye"
+      ],
+      "logo": "/static/brand-logos/开野.svg"
+    },
+    {
+      "name": "Volante",
+      "displayName": "Volante",
+      "color": "#2f4858",
+      "aliases": [
+        "volante",
+        "沃兰迪",
+        "volandi"
+      ],
+      "logo": "/static/brand-logos/volante.svg"
+    }
+  ],
+  "defaultMetrics": [
+    {
+      "key": "weight",
+      "label": "重量",
+      "field": "整鞋重量(g)",
+      "unit": "g",
+      "rankMode": "lower"
+    },
+    {
+      "key": "heelHeight",
+      "label": "后跟高度",
+      "field": "后跟高度(mm)",
+      "unit": "mm",
+      "rankMode": "neutral"
+    },
+    {
+      "key": "drop",
+      "label": "落差",
+      "field": "整鞋落差(mm)",
+      "unit": "mm",
+      "rankMode": "neutral"
+    },
+    {
+      "key": "cushion",
+      "label": "后跟减震",
+      "field": "后跟减震(G)",
+      "unit": "G",
+      "rankMode": "lower"
+    },
+    {
+      "key": "rebound",
+      "label": "后跟回弹",
+      "field": "后跟回弹(R)",
+      "unit": "R",
+      "rankMode": "higher"
+    },
+    {
+      "key": "peakForce",
+      "label": "峰值力",
+      "field": "峰值力(N)",
+      "unit": "N",
+      "rankMode": "lower"
+    },
+    {
+      "key": "torsionAvg",
+      "label": "扭转力矩平均值",
+      "field": "__derived_torsion_avg",
+      "unit": "N.m",
+      "sourceFields": [
+        "L扭转力矩(N.m)",
+        "R扭转力矩(N.m)"
+      ],
+      "rankMode": "higher"
+    },
+    {
+      "key": "flex",
+      "label": "弯折",
+      "field": "弯折(N)",
+      "unit": "N",
+      "rankMode": "neutral"
+    }
+  ],
+  "derivedMetrics": [
+    {
+      "key": "torsionAvg",
+      "label": "扭转力矩平均值",
+      "field": "__derived_torsion_avg",
+      "unit": "N.m",
+      "sourceFields": [
+        "L扭转力矩(N.m)",
+        "R扭转力矩(N.m)"
+      ],
+      "rankMode": "higher"
+    }
+  ],
+  "metricRankModes": {
+    "整鞋重量(g)": "lower",
+    "鞋垫重量(g)": "lower",
+    "后跟减震(G)": "lower",
+    "峰值力(N)": "lower",
+    "缓冲加载率（N/s）": "lower",
+    "触地时间（s）": "lower",
+    "每公斤体重耗氧量（ml/kg/min）": "lower",
+    "能量消耗（kcal/kg/min）": "lower",
+    "后跟回弹(R)": "higher",
+    "回弹速率": "higher",
+    "前推力（N）": "higher",
+    "前推冲量（N.S）": "higher",
+    "蹬地速度（°/s）": "higher",
+    "蹬地力矩(N.m)": "higher",
+    "滚动速度（°/s）": "higher",
+    "弯折(N)": "neutral",
+    "L扭转力矩(N.m)": "hidden",
+    "R扭转力矩(N.m)": "hidden",
+    "__derived_torsion_avg": "higher"
+  },
+  "taxonomy": [
+    {
+      "name": "跑鞋",
+      "groups": [
+        {
+          "name": "场地",
+          "field": "场景标签",
+          "tags": [
+            "路跑",
+            "越野",
+            "田径场"
+          ]
+        },
+        {
+          "name": "功能",
+          "field": "功能标签",
+          "tags": [
+            "竞速【跑鞋】",
+            "训练【跑鞋】",
+            "慢跑【跑鞋】",
+            "稳定【跑鞋】",
+            "技术路段【越野】",
+            "轻度户外【越野】",
+            "短距离【越野】",
+            "中长距离【越野】"
+          ]
+        },
+        {
+          "name": "结构",
+          "field": "结构标签",
+          "tags": [
+            "无板",
+            "尼龙板",
+            "碳板"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "篮球鞋",
+      "groups": [
+        {
+          "name": "定位",
+          "field": "功能标签",
+          "tags": [
+            {
+              "name": "游猎【篮球】",
+              "icon": "/static/category-icons/youlie.png",
+              "description": "小体重/快/灵活；灵敏响应，球场感知，突破防守。"
+            },
+            {
+              "name": "猛攻【篮球】",
+              "icon": "/static/category-icons/menggong.png",
+              "description": "对抗爆发，高强度，一步启动，强劲对抗，稳定防护。"
+            },
+            {
+              "name": "角逐【篮球】",
+              "icon": "/static/category-icons/jiaozhu.png",
+              "description": "弹跳奔跑/机动性，保持活力，滚动前进，不竭奔跑。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "足球鞋",
+      "groups": [
+        {
+          "name": "场地",
+          "field": "场景标签",
+          "tags": [
+            "SG【足球】",
+            "FG【足球】",
+            "AG【足球】",
+            "TF【足球】",
+            "IC【足球】"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "羽毛球鞋",
+      "groups": [
+        {
+          "name": "功能",
+          "field": "功能标签",
+          "tags": [
+            "全能型【羽毛球】",
+            "保护型【羽毛球】",
+            "启动型【羽毛球】"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "网球鞋",
+      "groups": []
+    },
+    {
+      "name": "综训鞋",
+      "groups": []
+    },
+    {
+      "name": "休闲/拖鞋",
+      "groups": []
+    },
+    {
+      "name": "儿童鞋",
+      "groups": []
+    },
+    {
+      "name": "其他",
+      "groups": []
+    }
+  ],
+  "selectFields": {
+    "品牌": "singleSelect",
+    "一级品类": "singleSelect",
+    "结构标签": "multipleSelect",
+    "功能标签": "multipleSelect",
+    "场景标签": "multipleSelect",
+    "测试人": "singleSelect",
+    "购买人": "singleSelect",
+    "有无鞋垫": "singleSelect"
+  },
+  "entrySections": [
+    {
+      "name": "基础信息",
+      "open": true,
+      "fields": [
+        "唯一ID号",
+        "测试日期",
+        "名称",
+        "品牌",
+        "一级品类",
+        "结构标签",
+        "功能标签",
+        "场景标签",
+        "测试人",
+        "购买人",
+        "插入图片",
+        "有无鞋垫",
+        "备注"
+      ]
+    },
+    {
+      "name": "基础测试指标",
+      "open": true,
+      "fields": [
+        "整鞋重量(g)",
+        "鞋垫重量(g)",
+        "后跟高度(mm)",
+        "前掌高度(mm)",
+        "整鞋落差(mm)",
+        "鞋垫高度(mm)",
+        "前掌宽度(mm)",
+        "中腰宽度(mm)",
+        "后跟宽度(mm)",
+        "落锤ID",
+        "后跟减震(G)",
+        "后跟回弹(R)",
+        "压缩量(DM)",
+        "峰值力(N)",
+        "扭转ID",
+        "L扭转力矩(N.m)",
+        "R扭转力矩(N.m)",
+        "弯折(N)",
+        "起翘高度",
+        "起翘点",
+        "回弹速率"
+      ]
+    },
+    {
+      "name": "生物力学数据",
+      "open": false,
+      "fields": [
+        "步长（m）",
+        "跑速（m/s）",
+        "垂直振幅(cm)",
+        "垂直步幅比（%）",
+        "支撑期占比（%）",
+        "摆动期占比（%）",
+        "过渡期占比（%）",
+        "前推力（N）",
+        "前推冲量（N.S）",
+        "蹬地速度（°/s）",
+        "蹬地力矩(N.m)",
+        "滚动速度（°/s）",
+        "缓冲加载率（N/s）",
+        "外翻角度（°）",
+        "外翻速度（°/s）",
+        "制动期占比（%）",
+        "支撑期时长（s）",
+        "蹬地角度（°）",
+        "触地时间（s）"
+      ]
+    },
+    {
+      "name": "代谢数据",
+      "open": false,
+      "fields": [
+        "每公斤体重耗氧量（ml/kg/min）",
+        "能量消耗（kcal/kg/min）",
+        "平均心率(次/min)"
+      ]
+    }
+  ]
+}

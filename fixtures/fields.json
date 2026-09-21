@@ -1,0 +1,226 @@
+[
+  {
+    "name": "唯一ID号",
+    "type": "singleLineText"
+  },
+  {
+    "name": "测试日期",
+    "type": "date"
+  },
+  {
+    "name": "名称",
+    "type": "singleLineText"
+  },
+  {
+    "name": "测试人",
+    "type": "singleSelect"
+  },
+  {
+    "name": "购买人",
+    "type": "singleSelect"
+  },
+  {
+    "name": "插入图片",
+    "type": "attachment"
+  },
+  {
+    "name": "有无鞋垫",
+    "type": "singleSelect"
+  },
+  {
+    "name": "整鞋重量(g)",
+    "type": "number"
+  },
+  {
+    "name": "鞋垫重量(g)",
+    "type": "number"
+  },
+  {
+    "name": "后跟高度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "前掌高度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "整鞋落差(mm)",
+    "type": "number"
+  },
+  {
+    "name": "鞋垫高度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "前掌宽度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "中腰宽度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "后跟宽度(mm)",
+    "type": "number"
+  },
+  {
+    "name": "落锤ID",
+    "type": "number"
+  },
+  {
+    "name": "后跟减震(G)",
+    "type": "number"
+  },
+  {
+    "name": "后跟回弹(R)",
+    "type": "number"
+  },
+  {
+    "name": "压缩量(DM)",
+    "type": "number"
+  },
+  {
+    "name": "峰值力(N)",
+    "type": "number"
+  },
+  {
+    "name": "扭转ID",
+    "type": "number"
+  },
+  {
+    "name": "L扭转力矩(N.m)",
+    "type": "number"
+  },
+  {
+    "name": "R扭转力矩(N.m)",
+    "type": "number"
+  },
+  {
+    "name": "弯折(N)",
+    "type": "number"
+  },
+  {
+    "name": "起翘高度",
+    "type": "number"
+  },
+  {
+    "name": "起翘点",
+    "type": "number"
+  },
+  {
+    "name": "回弹速率",
+    "type": "number"
+  },
+  {
+    "name": "备注",
+    "type": "longText"
+  },
+  {
+    "name": "步长（m）",
+    "type": "number"
+  },
+  {
+    "name": "跑速（m/s）",
+    "type": "number"
+  },
+  {
+    "name": "垂直振幅(cm)",
+    "type": "number"
+  },
+  {
+    "name": "垂直步幅比（%）",
+    "type": "number"
+  },
+  {
+    "name": "支撑期占比（%）",
+    "type": "number"
+  },
+  {
+    "name": "摆动期占比（%）",
+    "type": "number"
+  },
+  {
+    "name": "过渡期占比（%）",
+    "type": "number"
+  },
+  {
+    "name": "前推力（N）",
+    "type": "number"
+  },
+  {
+    "name": "前推冲量（N.S）",
+    "type": "number"
+  },
+  {
+    "name": "蹬地速度（°/s）",
+    "type": "number"
+  },
+  {
+    "name": "蹬地力矩(N.m)",
+    "type": "number"
+  },
+  {
+    "name": "滚动速度（°/s）",
+    "type": "number"
+  },
+  {
+    "name": "缓冲加载率（N/s）",
+    "type": "number"
+  },
+  {
+    "name": "外翻角度（°）",
+    "type": "number"
+  },
+  {
+    "name": "外翻速度（°/s）",
+    "type": "number"
+  },
+  {
+    "name": "制动期占比（%）",
+    "type": "number"
+  },
+  {
+    "name": "支撑期时长（s）",
+    "type": "number"
+  },
+  {
+    "name": "蹬地角度（°）",
+    "type": "number"
+  },
+  {
+    "name": "触地时间（s）",
+    "type": "number"
+  },
+  {
+    "name": "每公斤体重耗氧量（ml/kg/min）",
+    "type": "number"
+  },
+  {
+    "name": "能量消耗（kcal/kg/min）",
+    "type": "number"
+  },
+  {
+    "name": "平均心率(次/min)",
+    "type": "number"
+  },
+  {
+    "name": "品牌",
+    "type": "singleSelect"
+  },
+  {
+    "name": "一级品类",
+    "type": "singleSelect"
+  },
+  {
+    "name": "结构标签",
+    "type": "multipleSelect"
+  },
+  {
+    "name": "功能标签",
+    "type": "multipleSelect"
+  },
+  {
+    "name": "场景标签",
+    "type": "multipleSelect"
+  }
+]

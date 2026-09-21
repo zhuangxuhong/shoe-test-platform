@@ -1,0 +1,6 @@
+**
+!package.json
+!analysis-web/
+!analysis-web/**
+!fixtures/
+!fixtures/**
