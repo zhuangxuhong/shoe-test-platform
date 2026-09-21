@@ -1,0 +1,9 @@
+import fs from 'node:fs';import assert from 'node:assert/strict';
+const api='http://127.0.0.1:13001/api',a=JSON.parse(fs.readFileSync('.local/test-account.json')),state=JSON.parse(fs.readFileSync('.local/teable-test.json'));let cookie;
+async function req(method,path,body){const r=await fetch(api+path,{method,headers:{'Content-Type':'application/json',...(cookie?{Cookie:cookie}:{})},body:body?JSON.stringify(body):undefined});if(r.headers.getSetCookie().length)cookie=r.headers.getSetCookie().map(x=>x.split(';')[0]).join('; ');const text=await r.text();if(!r.ok)throw Error(method+' '+path+' HTTP '+r.status+' '+text.slice(0,200));return text?JSON.parse(text):null;}
+await req('POST','/auth/signin',{email:a.email,password:a.password});
+const table=state.tableId;const before=await req('GET',`/table/${table}/record?take=1000&fieldKeyType=name`);const created=[];
+try{for(let i=0;i<2;i++){const result=await req('POST',`/table/${table}/record`,{fieldKeyType:'name',records:[{fields:{'测试日期':'2026-01-01','名称':'__自动编号验证__'}}]});created.push(result.records[0].id);}
+ const after=await req('GET',`/table/${table}/record?take=1000&fieldKeyType=name`);const rows=after.records.filter(x=>created.includes(x.id));assert.equal(rows.length,2);const ids=rows.map(x=>x.fields['唯一ID号']);assert.ok(ids.every(x=>/^T\d+$/.test(x)));assert.equal(new Set(ids).size,2);assert.ok(!before.records.some(x=>ids.includes(x.fields['唯一ID号'])));console.log('Native automatic IDs created correctly:',ids.join(', '));
+}finally{for(const id of created)await req('DELETE',`/table/${table}/record/${id}`);}
+const final=await req('GET',`/table/${table}/record?take=1000&fieldKeyType=name`);assert.equal(final.records.length,before.records.length);const views=await req('GET',`/table/${table}/view`);assert.equal(views.length,5);console.log('Temporary test rows removed; five views and original rows retained.');
