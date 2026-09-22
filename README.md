@@ -18,4 +18,8 @@
 
 目录：analysis-web 正式代码；fixtures 虚构记录；tests 自动测试；scripts 工具；deploy 部署模板；migrations 数据库策略；.github CI 与 PR 模板。
 
-禁止上传真实测试记录、Excel、.env、账号、附件和备份。本仓库应先创建为私有；开源前单独审查品牌图标与依赖许可。
+禁止上传真实测试记录、Excel、.env、账号、附件和备份。本仓库用于公开 Fork 协作；第三方资源的使用仍受各自许可约束。
+## 公开协作
+
+同事无需原仓库写权限：Fork → 用 GitHub Desktop 下载 → 新建分支调试 → 检查项目 → 提交 PR。负责人审核且自动测试通过后合并，再在服务器电脑运行“同步主分支.cmd”和“发布指定版本.cmd”。详细操作见 docs/collaboration.md。
+
