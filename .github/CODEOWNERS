@@ -1,2 +1,2 @@
-# Before enabling required code-owner review, replace this comment with:
-# * @YOUR-GITHUB-OWNER
+# 默认由项目负责人审阅；强制审批需在 GitHub 分支规则中启用。
+* @zhuangxuhong

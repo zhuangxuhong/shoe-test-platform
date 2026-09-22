@@ -1,5 +1,30 @@
 # GitHub 协作
 
+团队私有仓库：https://github.com/zhuangxuhong/shoe-test-platform 。负责人：@zhuangxuhong。
+
+## 同事首次使用
+
+获得仓库访问权限后，使用 GitHub Desktop 克隆仓库，或执行：
+
+```sh
+git clone https://github.com/zhuangxuhong/shoe-test-platform.git
+cd shoe-test-platform
+npm run check
+npm run dev
+```
+
+需要 Node.js 24；示例模式无需安装依赖，打开 http://127.0.0.1:8091 即可使用虚构数据调试。真实数据库、账号和密钥不在仓库中。完整 Teable 联调参见 development.md。
+
+## 日常提交与发布
+
+从最新 main 创建自己的功能分支，完成修改并通过 npm run check 后推送该分支，向 main 提交 Pull Request。负责人查看差异及自动测试结果后合并；合并不会自动更新办公室的服务器，仍需在服务器电脑同步并执行发布流程。
+
+CODEOWNERS 指定默认审阅人，但它本身不能禁止直接推送。必须根据账户套餐能力设置 main 分支保护。同一个账号不能批准自己提交的 PR；验证双人审批时，需要另一位真实团队成员提交修改。
+
+## 管理员配置清单
+
+2026-09-22 实测：当前账号套餐对私有仓库的分支保护返回 HTTP 403，提示需要 GitHub Pro。仓库保持私有；目前 PR 审阅是团队约定，尚未获得平台强制保护。需要强制「负责人批准且测试通过后才能合并」时，由负责人决定升级套餐后开启规则。未授权自动购买套餐。
+
 1. 在负责人账号或组织创建新的私有仓库，不选择自动生成 README（本地已有）。
 2. GitHub Desktop 添加本地仓库，Publish repository 时保留 Private；或配置 origin 后 git push -u origin main。目标必须是自己的新仓库，不能推到参考同事的仓库。
 3. 邀请团队成员为协作者。将 .github/CODEOWNERS 中示例改为真实负责人的 @用户名。
