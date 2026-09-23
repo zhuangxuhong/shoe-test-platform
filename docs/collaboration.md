@@ -38,3 +38,9 @@ Codex 不会在后台自动接收或合并 PR。需要协助审查时，在对�
 ## 公开范围
 
 任何人都可以查看和下载仓库及提交历史，但 Fork 和 PR 不会赋予原仓库写权限。正式 Teable、测试数据、密钥和本地备份不在仓库中。第三方素材权利说明见 third-party.md；公开可见不等于授予通用开源许可。
+
+## 使用项目 Skill
+
+仓库内置 .agents/skills/sync-main 和 .agents/skills/commit-push-pr。在 Codex 中打开本仓库根目录，新建任务或重新加载项目后，调用 `$sync-main` 同步上游，调用 `$commit-push-pr` 提交当前已完成的修改。首次提交需要 Git 和 GitHub CLI 登录同事自己的账号；Skill 会核验 Fork 和目标仓库。
+
+同步快捷脚本只接受干净 main；有未完成修改时保留现场，不会自动 stash 或覆盖。提交 Skill 会保留功能分支，创建 PR 后不自动合并或发布。当前负责人自己提交的 PR 仍需要其他可信代码所有者审批，不会绕过保护。
